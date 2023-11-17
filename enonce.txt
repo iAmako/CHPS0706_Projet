@@ -1,0 +1,113 @@
+projet 
+Etude thermique d'une fusée de retour en atmosphère 
+
+maillage d'une fusée 
+	Géométrie libre, un p'tit peu réalise quand-même PLS
+	tournée vers le bas 
+équation de la chaleur 
+	conditions de bords ? 
+	une bonne partie de l'échauffement se fait sur tous les bords qui rentrent directemetn dasn l'atmosphere 
+	bords à l'arrière osef, mis à température constante
+	
+
+Omega = la fusée
+
+Modele d'équations (Stationnaire)  :
+	- div(Ka gradiant_u) = f(x,y)			, quelque soit (x,y) € Omega
+	- Ka (d_u/d_vecteur_n) = 0			sur Gamma_N (bords verticaux) 
+	- Ka (d_u/d_vecteur_n) = alpha(u-u_E)		sur Gamma_F (bords impactés par la compression thermique)
+	u = u_D						sur Gamma_D (bords "étranger" au phénomène physique de compression)  
+
+Rappel : u = u_D sur Gamma_D ~ -Truc_a (d_u/d_vecteur_n) = Beta(u-u_D)
+	(Dirichlet)		(Fourier-Robin) avec Beta = très grande [BIG]
+
+
+PARAM PHYSIQUES : 
+clim : f(x,y) = (-1/2)exp_-||x(x-x_0, y-y_0||²
+					     ²
+
+	      ~ (-1/2)exp_-d²
+
+	Ka : à rechercher conductivité thermique de l'air)
+
+	u_E = 10^-3 * V² (Temp ext du bouclier thermique en C°)   (la vitesse est variable, on va pouvoir la choisir dans les MACH1-2-3-10 par exemple, penser à convertir kilometres heures en m*s )
+	
+	d = Ka_b / e (Ka_b conductivité du matériau b bouclier thermique à choisir) 
+		     (e = epaisseur du bouclier thermique)
+
+	U_d = 20°C
+
+
+
+
+(u = inconnue)
+
+
+ATTENDUS : 
+	Maillage(FFem++)
+	Formulation Variationnelle
+	Version Code FFem++
+	Version Code Python 
+		Comparer les deux codes pour vérifier qu'ils donnent le résultat le plus similaire possible 
+	Conditions paramètriques :
+				-> Varier V (à e ou d constant)
+				-> Varier e (à V constante)
+	Tests + graphiques ...
+
++ Rapport
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
