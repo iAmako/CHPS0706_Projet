@@ -46,6 +46,10 @@ clim : f(x,y) = (-1/2)exp_-||x(x-x_0, y-y_0||²
 ATTENDUS : 
 	Maillage(FFem++)
 	Formulation Variationnelle
+		condition de dirichlet traité comme condition de fourier robin 
+		tout se passe comme dans le cours 
+			dans le cours on traite neuman & fourier robin 
+			si on remplace dirichlet par fourier robin c'est la même situation 	
 	Version Code FFem++
 	Version Code Python 
 		Comparer les deux codes pour vérifier qu'ils donnent le résultat le plus similaire possible 
@@ -53,6 +57,8 @@ ATTENDUS :
 				-> Varier V (à e ou d constant)
 				-> Varier e (à V constante)
 	Tests + graphiques ...
+	
+	Relevé de température au voisinage du point M0 = (x0,y0) = (0,0) (un point proche de la pointe / capsule) (Trouver le noeud le plus proche et en sortir la composante température)
 
 + Rapport
 
@@ -60,8 +66,24 @@ ATTENDUS :
 
 
 
+pression exterieure évolue avec vitesse au carré 
+
+	
+Transfert thermique : 
+Kappa = Conductivité thermique 
+e = épaisseur (on la choisit)
+Résistance thermique R = e / Kappa 
+Facteur de transfert alpha = R^-1 = Kappa / e 
+Flux thermique q = -Kappa * (du / dx)
 
 
+Diffusion thermique : 
+Conductivité thermique Kappa 
+Source de chaleur f = - Kappa * ((d²u)/dx²))
+
+
+u = inconnue 
+uE = Exterieure 
 
 
 

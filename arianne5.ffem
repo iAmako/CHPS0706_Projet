@@ -30,6 +30,8 @@ real x5 = -(l/2)    , y5 = L + (l/2) + L ;
 real x6 = -(l/2)    , y6 = L + (l/2) ;
 real x7 = 0.0       , y7 = L ;
 
+
+
 real xpointe = l/2 , ypointe = 0;
 
 //paramètrage des bords 

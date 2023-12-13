@@ -68,7 +68,7 @@ def coeffelem_P1_source(Tri):
 def coeffelem_P1_transf(a,b):
     matrix = np.ones(2,float)
     mid_ab = dist(a, b) / 2
-    return mid_ab  * fct_alpha() * fct_uE()  * matrix#pansement 
+    return mid_ab  * fct_alpha() * fct_uE()  * matrix
 
 def coeffelem_P1_poids(a,b):
     matrix = np.array([[2.,1.],[1.,2.]])

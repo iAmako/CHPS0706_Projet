@@ -1,9 +1,11 @@
 //validation.ffem
-mesh Th = readmesh("Maillages/m1.msh");
+mesh Th = readmesh("Maillages/arianne_5.msh");
+e = 5.0//epaisseur 
+Kappa =  1.0//Conductivité thermique du matériau 
 int codeDir = 1;
 func u = 1.0+sin(0.5*pi*x) + x * (x - 4.0) * cos (0.5 * pi * y); // validation_pen = même chose mais avec fourier-robin 
-func f = (pi^2/4)*sin((pi*x)/2) - 2*cos((pi*y)/2) + x*(x-4)*(pi^2/4)*cos((pi*y)/2);
-func uE = 1.0;
+func f = (-1/2)exp(-(d*d));
+func uE = 1.0;//E == extérieur 
 
 fespace Vh(Th,P1); //Espace EF-P1
 Vh uh, vh; //inconnue & Fct test
